@@ -92,6 +92,7 @@ function buildConsoleControls() {
     if (currentDS === 'array') {
         html = `
             <div class="op-group"><input type="number" id="arr-val" value="${genRand()}"><button class="action-btn" onclick="runArrayPush()">Insert End</button></div>
+            <div class="op-group"><input type="number" id="arr-idx" placeholder="Index 0-7"><input type="number" id="arr-u-val" value="${genRand()}"><button class="action-btn" onclick="runArrayUpdate()">Update Idx</button></div>
             <div class="op-group"><input type="number" id="arr-find" placeholder="Value"><button class="action-btn" onclick="runArraySearch()">Search</button></div>
             <div class="op-group"><button class="action-btn" style="background:#EF4444; width:100%;" onclick="runArrayPop()">Delete End</button></div>`;
     } else if (currentDS === 'stack') {
@@ -398,7 +399,6 @@ function runGraphConnect() {
     renderSandbox();
     printLog(`Established structural undirected network edge link map between node ${v1} and node ${v2}.`);
 }
-
 async function runGraphSearch(mode) {
     if (!graphVertices.length) return printLog("Error: No vertices exist to traverse.");
     
@@ -463,6 +463,7 @@ async function runGraphSearch(mode) {
     
     printLog(`${mode.toUpperCase()} Traversal Complete. Visited order sequence: [${processingOrder.join(' ➔ ')}]`);
 }
+
 function wipeGraph() { graphVertices = []; graphEdges = []; renderSandbox(); printLog("Graph swept."); }
 
 // Vector Draw Support Utility Function
