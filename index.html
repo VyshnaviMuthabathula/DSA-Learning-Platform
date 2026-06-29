@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures and Algorithms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div id="hub-page" class="studio-page active">
+        <header class="hub-header">
+            <h1 class="gradient-title">Data Structures and Algorithms</h1>
+            <p class="subtitle">An interactive visual playground for experimenting with premium linear and hierarchical structures.</p>
+        </header>
+
+        <main class="hub-content">
+            <h2 class="section-title">Core Categories</h2>
+            <div class="cards-grid">
+                <div class="dsa-button-card" data-ds="array" data-color="#3B82F6">
+                    <div class="card-icon" style="color: #3B82F6;">[ ]</div>
+                    <h3>Array</h3>
+                    <p>Contiguous memory blocks</p>
+                </div>
+                <div class="dsa-button-card" data-ds="stack" data-color="#A855F7">
+                    <div class="card-icon" style="color: #A855F7;">⤓</div>
+                    <h3>Stack</h3>
+                    <p>Last-In, First-Out (LIFO)</p>
+                </div>
+                <div class="dsa-button-card" data-ds="queue" data-color="#06B6D4">
+                    <div class="card-icon" style="color: #06B6D4;">⇉</div>
+                    <h3>Queue</h3>
+                    <p>First-In, First-Out (FIFO)</p>
+                </div>
+                <div class="dsa-button-card" data-ds="linkedlist" data-color="#EC4899">
+                    <div class="card-icon" style="color: #EC4899;">⚬→</div>
+                    <h3>Linked List</h3>
+                    <p>Node pointer sequence</p>
+                </div>
+                <div class="dsa-button-card" data-ds="tree" data-color="#10B981">
+                    <div class="card-icon" style="color: #10B981;">⋏</div>
+                    <h3>Binary Tree</h3>
+                    <p>Hierarchical search split</p>
+                </div>
+                <div class="dsa-button-card" data-ds="graph" data-color="#F59E0B">
+                    <div class="card-icon" style="color: #F59E0B;">☌</div>
+                    <h3>Graph</h3>
+                    <p>Interconnected networks</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="lab-page" class="studio-page">
+        <button class="back-btn" onclick="exitLab()">← Back to Hub</button>
+        
+        <header class="lab-header">
+            <h1 id="lab-title">Data Structure</h1>
+            <p id="lab-definition">Dynamic description load context.</p>
+        </header>
+
+        <div class="lab-workspace">
+            <section class="control-panel">
+                <h2>Control Deck</h2>
+                <div id="dynamic-controls"></div>
+            </section>
+
+            <section class="sandbox-panel">
+                <h2>Visual Sandbox</h2>
+                <div class="visual-sandbox" id="sandbox-container">
+                    <svg id="canvas-svg"></svg>
+                    <div id="dom-nodes-layer"></div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="console-log">
+            <div class="console-title">System Console Log</div>
+            <div id="console-output" class="console-text">&gt; Initialize Engine... Ready.</div>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
